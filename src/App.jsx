@@ -5,6 +5,7 @@ import Specs from "./components/Specs";
 import Gallery from "./components/Gallery";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <HowItWorks/>
       <Specs />
       <Gallery />
       <Newsletter />
