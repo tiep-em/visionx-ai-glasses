@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function Hero() {
   return (
-    <div>Hero</div>
-  )
+    <section id="hero" className="min-h-screen pt-20 bg-red-500">
+      Hero
+    </section>
+  );
 }

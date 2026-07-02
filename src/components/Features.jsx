@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function Features() {
   return (
-    <div>Features</div>
-  )
+    <section id="features" className="min-h-screen bg-blue-500">
+      Features
+    </section>
+  );
 }
