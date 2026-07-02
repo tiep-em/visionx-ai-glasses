@@ -1,7 +1,112 @@
+import glasses from "../assets/images/visionx-glasses.png";
+import { FaBolt, FaStar, FaArrowRight, FaPlay } from "react-icons/fa";
+
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen pt-20 bg-red-500">
-      Hero
+    <section id="hero" className="min-h-screen bg-[#05070D] pt-20">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Hero Content */}
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-80px)]">
+          {/* Left */}
+
+          <div className="space-y-8">
+            {/* Badge */}
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm">
+              <FaBolt className="text-yellow-400" />
+              <span>VisionX AI Glasses</span>
+            </div>
+
+            {/* Heading */}
+
+            <div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                See the Future.
+                <br />
+                <span className="text-blue-500">Live Smarter.</span>
+              </h1>
+            </div>
+
+            {/* Description */}
+
+            <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
+              AI-powered smart glasses that understand the world around you and
+              enhance the way you live, work, and connect.
+            </p>
+
+            {/* Buttons */}
+
+            <div className="flex flex-wrap gap-4">
+              <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 hover:scale-105 hover:shadow-xl transition-all duration-300 px-8 Fpy-4 rounded-full text-white font-semibold">
+                Pre-order Now
+                <FaArrowRight />
+              </button>
+
+              <button className="border border-white/20 hover:border-blue-500 transition px-8 py-4 rounded-full text-white">
+                Watch Video
+              </button>
+            </div>
+
+            {/* Rating */}
+
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-3">
+                <img
+                  src="https://i.pravatar.cc/50?img=1"
+                  alt=""
+                  className="w-12 h-12 rounded-full border-2 border-black"
+                />
+
+                <img
+                  src="https://i.pravatar.cc/50?img=2"
+                  alt=""
+                  className="w-12 h-12 rounded-full border-2 border-black"
+                />
+
+                <img
+                  src="https://i.pravatar.cc/50?img=3"
+                  alt=""
+                  className="w-12 h-12 rounded-full border-2 border-black"
+                />
+              </div>
+
+              <div>
+                <div className="flex items-center gap-1 text-yellow-400">
+                  {[...Array(5)].map((_, index) => (
+                    <FaStar key={index} />
+                  ))}
+                  <span className="ml-2 font-semibold text-white">4.8/5</span>
+                </div>
+
+                <p className="text-gray-500 text-sm">
+                  Trusted by 10,000+ early adopters
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right */}
+
+          <div className="relative flex items-center justify-center">
+            {/* Background Glow */}
+
+            <div className="absolute w-[450px] h-[450px] rounded-full bg-blue-500/20 blur-[120px]"></div>
+
+            {/* Circle */}
+
+            <div className="absolute w-[420px] h-[420px] rounded-full border border-white/10"></div>
+
+            {/* Image */}
+
+            <img
+              src={glasses}
+              alt="VisionX AI Glasses"
+              className="animate-float relative z-10 w-full max-w-xl drop-shadow-[0_0_60px_rgba(59,130,246,0.45)] hover:scale-105 transition duration-500"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
