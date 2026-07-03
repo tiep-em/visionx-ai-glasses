@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import { fadeUp, zoomIn } from "../animations/motionVariants";
 
 export default function Hero() {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <section
       id="hero"
@@ -54,12 +59,23 @@ export default function Hero() {
             {/* Buttons */}
 
             <div className="flex flex-wrap gap-4">
-              <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 hover:scale-105 hover:shadow-xl transition-all duration-300 px-8 py-4 rounded-full text-white font-semibold">
+              <button
+                onClick={() => scrollToSection("newsletter")}
+                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 hover:scale-105 hover:shadow-xl transition-all duration-300 px-8 py-4 rounded-full text-white font-semibold"
+              >
                 Pre-order Now
                 <FaArrowRight />
               </button>
 
-              <button className="border border-white/20 hover:border-blue-500 transition px-8 py-4 rounded-full text-white">
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.youtube.com/watch?v=5l_6XrR18WY",
+                    "_blank",
+                  )
+                }
+                className="border border-white/20 hover:border-blue-500 transition px-8 py-4 rounded-full text-white"
+              >
                 Watch Video
               </button>
             </div>

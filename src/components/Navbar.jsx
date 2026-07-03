@@ -111,6 +111,7 @@ export default function Navbar() {
 
           {/* Buy Now */}
           <button
+            onClick={() => scrollToSection("newsletter")}
             className="
               bg-blue-600
               hover:bg-blue-500
