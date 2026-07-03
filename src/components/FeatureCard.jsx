@@ -1,6 +1,10 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../animations/motionVariants";
+
 export default function FeatureCard({ icon: Icon, title, description }) {
   return (
-    <div
+    <motion.div
+      variants={fadeUp}
       className="
     group
     h-full
@@ -47,6 +51,6 @@ export default function FeatureCard({ icon: Icon, title, description }) {
       <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
 
       <p className="text-gray-400 leading-7">{description}</p>
-    </div>
+    </motion.div>
   );
 }
