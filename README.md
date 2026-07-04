@@ -1,16 +1,86 @@
-# React + Vite
+# VisionX AI Glasses Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive landing page built with React and Vite to showcase VisionX AI Glasses.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://visionx-ai-glasses.vercel.app/
 
-## React Compiler
+## 📂 GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://github.com/tiep-em/visionx-ai-glasses
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- Responsive design for desktop, tablet, and mobile
+- Modern UI with Tailwind CSS
+- Smooth scrolling navigation
+- Scroll reveal animations
+- Interactive Hero section
+- Product Features section
+- Product Specifications
+- Product Gallery
+- Newsletter subscription using EmailJS
+- Optimized images (WebP)
+- Performance optimized for Google PageSpeed
+
+---
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- React Icons
+- Framer Motion
+- EmailJS
+- Vercel
+
+---
+
+## 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/tiep-em/visionx-ai-glasses
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+Build production
+
+```bash
+npm run build
+```
+
+---
+
+## 📸 Google PageSpeed
+
+Performance score (Mobile)
+
+- Performance: 94
+- Accessibility: 100
+- Best Practices: 96
+- SEO: 100
+
+---
+
+## 📄 Author
+
+Phan Van Tiep Em
+
+FPT University – Software Engineering
