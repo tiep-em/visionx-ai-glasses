@@ -138,6 +138,9 @@ export default function Navbar() {
             duration-300
           "
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
         >
           {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>

@@ -30,7 +30,7 @@ export default function Hero() {
           >
             {/* Badge */}
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-700 dark:text-blue-400 text-sm">
               <FaBolt className="text-yellow-400" />
               <span>VisionX AI Glasses</span>
             </div>
@@ -111,7 +111,7 @@ export default function Hero() {
                   <span className="ml-2 font-semibold text-white">4.8/5</span>
                 </div>
 
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-700 dark:text-gray-400 text-sm">
                   Trusted by 10,000+ early adopters
                 </p>
               </div>
