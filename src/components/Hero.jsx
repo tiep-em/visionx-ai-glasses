@@ -1,4 +1,4 @@
-import glasses from "../assets/images/visionx-glasses.png";
+import glasses from "../assets/images/visionx-glasses.webp";
 import { FaBolt, FaStar, FaArrowRight, FaPlay } from "react-icons/fa";
 import { theme } from "../style/theme";
 import { motion } from "framer-motion";

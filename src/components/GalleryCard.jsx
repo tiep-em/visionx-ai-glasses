@@ -14,6 +14,7 @@ export default function GalleryCard({ image, title }) {
       <img
         src={image}
         alt={title}
+        loading="lazy"
         className="
           w-full
           h-[320px]

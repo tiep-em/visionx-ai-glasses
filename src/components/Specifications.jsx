@@ -1,4 +1,4 @@
-import glasses from "../assets/images/visionx-glasses.png";
+import glasses from "../assets/images/visionx-glasses.webp";
 
 import { specifications } from "../data/specificationsData";
 

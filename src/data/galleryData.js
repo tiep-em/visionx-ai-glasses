@@ -1,7 +1,7 @@
-import gallery1 from "../assets/images/image1.png";
-import gallery2 from "../assets/images/image2.png";
-import gallery3 from "../assets/images/image3.png";
-import gallery4 from "../assets/images/image4.png";
+import gallery1 from "../assets/images/image1.webp";
+import gallery2 from "../assets/images/image2.webp";
+import gallery3 from "../assets/images/image3.webp";
+import gallery4 from "../assets/images/image4.webp";
 
 export const galleryData = [
   {
