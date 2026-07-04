@@ -1,23 +1,49 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email) {
-      alert("Please enter your email.");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      setMessage("Please enter a valid email address.");
       return;
     }
 
-    setMessage("Successfully subscribed!");
-    setEmail("");
+    setLoading(true);
+    setMessage("");
 
-    setTimeout(() => {
-      setMessage("");
-    }, 3000);
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          user_email: email,
+          time: new Date().toLocaleString(),
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      );
+
+      setMessage("🎉 Successfully subscribed!");
+      setEmail("");
+    } catch (error) {
+      console.log(error);
+      console.log(error.status);
+      console.log(error.text);
+      setMessage("❌ Failed to subscribe. Please try again.");
+    } finally {
+      setLoading(false);
+
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    }
   };
 
   return (
@@ -76,19 +102,22 @@ export default function Newsletter() {
 
             <button
               type="submit"
+              disabled={loading}
               className="
-                bg-blue-600
-                hover:bg-blue-500
-                transition
-                duration-300
-                px-8
-                py-4
-                rounded-full
-                text-white
-                font-semibold
-              "
+                  bg-blue-600
+                  hover:bg-blue-500
+                  transition
+                  duration-300
+                  px-8
+                  py-4
+                  rounded-full
+                  text-white
+                  font-semibold
+                  disabled:opacity-60
+                  disabled:cursor-not-allowed
+                "
             >
-              Subscribe
+              {loading ? "Subscribing..." : "Subscribe"}
             </button>
           </form>
           {/* Thông báo */}
